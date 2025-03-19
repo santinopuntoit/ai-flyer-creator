@@ -24,7 +24,7 @@ interface TextOverlayEditorProps {
 export function TextOverlayEditor({ imageUrl, formData }: TextOverlayEditorProps) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
-  const [selectedRatio, setSelectedRatio] = useState(ASPECT_RATIOS[0]);
+  const [selectedRatio, setSelectedRatio] = useState<(typeof ASPECT_RATIOS)[number]>(ASPECT_RATIOS[0]);
   const [scale, setScale] = useState(1);
   const [fontLoaded, setFontLoaded] = useState(false);
 
